@@ -20,14 +20,21 @@ namespace MoodAnalyserProject
         }
         public string Mood(string message)
         {
-            if (message.ToLower().Contains("happy"))
+            try { 
+                if (message.ToLower().Contains(""))
+                {
+                    return "happy";
+                }
+                else
+                {
+                    return "sad";
+                }
+            }
+            catch
             {
                 return "happy";
             }
-            else
-            {
-                return "sad";
-            }
+            
         }
-    }
-}
+    } 
+  }
